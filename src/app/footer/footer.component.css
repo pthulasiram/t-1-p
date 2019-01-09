@@ -1,0 +1,9 @@
+.footer-bar-nav a{
+color:gray;
+font-weight:400
+}
+
+.footer-bar-nav a:hover{
+    color:green;
+    
+    }

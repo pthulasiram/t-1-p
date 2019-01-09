@@ -1,0 +1,221 @@
+<body class="blog-page">
+  <app-header></app-header>
+
+  <div class="container">
+    
+    <div class="row" *ngIf="book">
+
+      <div class="col-12">
+        <div class="breadcrumbs">
+          <ul class="flex flex-wrap align-items-center p-0 m-0">
+            <li><a [routerLink]="['']"><i class="fa fa-home"></i> Home</a></li>
+            <li>Ebooks</li>
+            <li>{{book[0].title }}</li>
+          </ul>
+        </div><!-- .breadcrumbs -->
+      </div><!-- .col -->
+
+    </div><!-- .row -->
+
+    <div class="row" *ngIf="spinner">
+
+        <div class="col-12">
+          <header class=" heading flex justify-content-center align-items-center">
+            <app-spinner></app-spinner>
+          </header>
+        </div><!-- .col -->
+  
+      </div><!-- .row -->
+    <div class="row" *ngIf="!spinner&&book">
+        <div class="col-12" *ngIf="showNoBooks">
+            <div class=" heading flex justify-content-center align-items-center">
+              No records found  for the book title  {{book[0].title }}  . Try with different Book.......
+              
+                <h5 class="entry-title"><a [routerLink]="['/topics']"> Click here </a></h5>
+              
+            </div>
+          </div>
+      <div class="col-12 col-lg-8">
+        <!-- <div class="col-12 col-lg-8" *ngIf="book"> -->
+        <div class="col-12">
+          <div class="instructors-info">
+            <header class="entry-heading">
+              <h2 class="entry-title"><b class='book-title'>{{book[0].title }}</b></h2>
+            </header><!-- .entry-heading -->
+
+            <div class="instructor-short-info flex flex-wrap">
+              <div class="instructors-stats">
+                <img [src]="imageData" [alt]="book[0].title ">
+
+              </div><!-- .instructors-stats -->
+
+              <div class="instructors-details">
+                <div class="entry-content mt-3 ads">
+                        <!-- <img src="./assets/images/ads.jpg" alt=""> -->
+                        <ng-adsense
+                        [adClient]="'ca-pub-7975824069098469'"
+                        [adSlot]="7512348693"
+                        [display]="'display:block'"
+                        [adFormat]="auto"
+                        adtest="Ad here"
+                        >
+                      </ng-adsense>
+                  <!-- <ins class="adsbygoogle"
+                       style="display:block"
+                       data-ad-client="ca-pub-7975824069098469"
+                       data-ad-slot="7512348693"
+                       data-ad-format="auto"
+                       data-full-width-responsive="true"></ins> -->
+                
+                <!-- <ng-adsense ></ng-adsense> -->
+                    <!-- <p>
+                        Book Name: {{book[0].title}} Author:  {{book[0].author}} Google Book ID: {{book[0].googlebookid}}
+                        Open Library id: {{book[0].openlibraryid}} Year: {{book[0].year}} Pages: {{book[0].pages}} Language: {{book[0].language}} Edition: {{book[0].edition}} File format: {{book[0].extension}}
+                        ....
+                           
+                    </p> -->
+                </div><!-- .entry-content -->
+              </div><!-- .instructors-details -->
+            </div><!-- .instructor-short-info -->
+          </div>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th></th>
+                <th>{{book[0].title }}</th>
+
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td>Author</td>
+                <td>{{book[0].author}}</td>
+
+              </tr>
+              <tr>
+                <td>Year</td>
+                <td>{{book[0].year}}</td>
+
+              </tr>
+              <tr>
+                <td>Edition</td>
+                <td>{{book[0].edition}}</td>
+
+              </tr>
+
+              <tr>
+                <td>Publisher</td>
+                <td>{{book[0].publisher}}</td>
+
+              </tr>
+              <tr>
+                <td>Pages</td>
+                <td>{{book[0].pages}}</td>
+
+              </tr>
+              <tr>
+                <td>Language</td>
+                <td>{{book[0].language}}</td>
+
+              </tr>
+              <tr>
+                <td>Google Book id</td>
+                <td>{{book[0].googlebookid}}</td>
+
+              </tr>
+              <tr>
+                <td>Open Library id</td>
+                <td>{{book[0].openlibraryid}}</td>
+
+              </tr>
+              <tr>
+                <td>Format</td>
+                <td>{{book[0].extension}}</td>
+
+              </tr>
+              <tr>
+                <td>Topic</td>
+                <td>{{book[0].topic}}</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- .col -->
+        <div class="col-12">
+            <header class=" heading flex justify-content-center align-items-center">
+              <a class="btn mt-4 mt-sm-0" [href]="downloadPath+book[0].md5" target="_blank">Download Ebook </a>
+            </header>
+          </div>
+
+        <div class="col-12">
+          <header class=" social_bg heading flex justify-content-center align-items-center social">
+             <fb-like url={{data.url}}></fb-like>
+              <google-plus url={{data.url}} ></google-plus>
+              <tweet url={{data.url}} text={{data.url}}></tweet>
+              <linkedin-share url={{data.url}}></linkedin-share>
+              <!-- <share-buttons [url]={{data.url}}></share-buttons> -->
+          </header>
+        </div>
+        <div class="col-12" *ngIf="showRbooks">
+          <div class="related-courses">
+            <header class="entry-heading flex flex-wrap justify-content-between align-items-center">
+              <h2 class="entry-title">Related Ebooks</h2>
+            </header><!-- .entry-heading -->
+
+            <div class="row mx-m-25">
+              <div class="col-12 col-lg-6 px-25">
+                <div class="course-content">
+
+                  <div class="course-content-wrap">
+                    <header class="entry-header">
+                      <h2 class="entry-title"><a [routerLink]="['/books',rbooks[0].id]"><b class='book-title'>{{rbooks[0].title }}</b></a></h2>
+
+                      <div class="entry-meta flex flex-wrap align-items-center">
+                        <div class="course-author"><i class='author'>{{rbooks[0].author}}</i></div>
+
+                        <div class="course-date">{{rbooks[0].year}}</div>
+                        <figure class="course-thumbnail">
+                          <a [routerLink]="['/books',rbooks[0].id]"><img [src]="imageR1Data" [alt]="rbooks[0].title "></a>
+                        </figure>
+                        <!-- .course-thumbnail -->
+
+                      </div><!-- .course-date -->
+                    </header><!-- .entry-header -->
+
+                  </div><!-- .course-content-wrap -->
+                </div><!-- .course-content -->
+              </div><!-- .col -->
+
+              <div class="col-12 col-lg-6 px-25">
+                <div class="course-content">
+
+
+                  <div class="course-content-wrap">
+                    <header class="entry-header">
+                      <h2 class="entry-title"><a [routerLink]="['/books',rbooks[0].id]"><b class='book-title'>{{rbooks[1].title }}</b></a></h2>
+
+                      <div class="entry-meta flex flex-wrap align-items-center">
+                        <div class="course-author"><i class='author'>{{rbooks[1].author}}</i></div>
+
+                        <div class="course-date">{{rbooks[1].year}}</div>
+                        <figure class="course-thumbnail">
+                          <a [routerLink]="['/books',rbooks[1].id]"><img [src]="imageR2Data" [alt]="rbooks[1].title "></a>
+                        </figure><!-- .course-thumbnail -->
+                      </div><!-- .course-date -->
+                    </header><!-- .entry-header -->
+                  </div><!-- .course-content-wrap -->
+                </div><!-- .course-content -->
+              </div><!-- .col -->
+            </div><!-- .row -->
+          </div>
+        </div>
+
+      </div><!-- .col -->
+      <div class="col-12 col-lg-4">
+        <app-sidebar></app-sidebar>
+      </div><!-- .col -->
+    </div><!-- .row -->
+  </div><!-- .container -->
+  <app-footer></app-footer>
+</body>

@@ -1,0 +1,31 @@
+<div class="cat-links">
+  <h2><b class="title">Email Subscription</b></h2>
+<form class="flex flex-wrap align-items-center" [formGroup]="subscribeForm" (ngSubmit)="submit()">
+  <div class='contianer-fluid'>
+    <div class="row">
+      <div class="col-12">
+        <input type="search" placeholder="Email here" formControlName="email">
+      </div>
+    </div>
+      <div class="row" *ngIf="(error!='')">
+       <div class="col-12"> 
+         {{error}}
+       </div>
+      </div>
+      <div class="row" *ngIf="(success!='')">
+          <div class="col-12"> 
+            {{success}}
+          </div>
+         </div>
+    <div class="row">
+      <div class="col-12">
+        <button type="submit" class="flex justify-content-center align-items-center sub_button">Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+
+</form><!-- .flex -->
+
+
+</div><!-- .search-widget -->

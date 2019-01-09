@@ -1,0 +1,11 @@
+.sub_button{
+    margin-top: 15px;
+    background-color: black;
+    color: white
+}
+.title{
+    font-size:22px;
+    font-weight: bold;
+    color:green;
+    margin-bottom: 16px;
+}

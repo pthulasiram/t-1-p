@@ -1,0 +1,5 @@
+# robots.txt 
+User-agent: *
+Disallow: /assets/js/
+
+Sitemap: https://ebooksden.com/sitemap.xml

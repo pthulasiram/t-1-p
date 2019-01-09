@@ -1,0 +1,75 @@
+{
+  "configVersion": 1,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/styles.dcf4fe68b1f2cd6380b7.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/css/bootstrap.css",
+        "/assets/css/bootstrap.min.css",
+        "/assets/css/elegant-fonts.css",
+        "/assets/css/font-awesome.css",
+        "/assets/css/font-awesome.min.css",
+        "/assets/css/swiper.css",
+        "/assets/css/swiper.min.css",
+        "/assets/css/themify-icons.css",
+        "/assets/images/404.gif",
+        "/assets/images/ads.jpg",
+        "/assets/images/app-store.png",
+        "/assets/images/courses-header.jpg",
+        "/assets/images/favicon.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/css/bootstrap.css": "76343abe85ffb6e21684f638f5872f52c05e4701",
+    "/assets/css/bootstrap.min.css": "3e035b1a98c46848c442529af959270bae59471b",
+    "/assets/css/elegant-fonts.css": "95ced882eb8d5285eaef83e85b41e4f22e3be821",
+    "/assets/css/font-awesome.css": "0140952c64e3f2b74ef64e050f2fe86eab6624c8",
+    "/assets/css/font-awesome.min.css": "fdf8af87b512381df12fef8ca4a29a9cc7b398e7",
+    "/assets/css/swiper.css": "300484b65c7a18a4379e28022333ade1e80ad35e",
+    "/assets/css/swiper.min.css": "f3bc53e03aefc4ee3be3adbcc707f7ed4c1c65a0",
+    "/assets/css/themify-icons.css": "33e249331cc06ae134d19b9745f5550b2165f52e",
+    "/assets/images/404.gif": "a3f19a625db4ba32cca46ce816db4bd4058ea0fd",
+    "/assets/images/ads.jpg": "f75aa6f2677d62f35f06d91e93f4bcdc107f78c1",
+    "/assets/images/app-store.png": "365be8406b510b2757306b103a6ece1239584c02",
+    "/assets/images/courses-header.jpg": "fa63724358ae651062ea242d97595b1e68677ac2",
+    "/assets/images/favicon.png": "d92f0fe969b5a953facc6a24f3c7590af58e2e1b",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/index.html": "c291bb572afab801c19297a81adf78b6d4b548b7",
+    "/styles.dcf4fe68b1f2cd6380b7.css": "4773c240d8d2e709e8ab4f432e46af3b3f55b25e"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
