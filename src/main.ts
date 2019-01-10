@@ -4,7 +4,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 import {NgxAnalyticsGoogleAnalytics} from "ngx-analytics/ga";
-
+import './icons';
 
 if (environment.production) {
   enableProdMode();

@@ -150,11 +150,7 @@
 
         <div class="col-12">
           <header class=" social_bg heading flex justify-content-center align-items-center social">
-             <fb-like url={{data.url}}></fb-like>
-              <google-plus url={{data.url}} ></google-plus>
-              <tweet url={{data.url}} text={{data.url}}></tweet>
-              <linkedin-share url={{data.url}}></linkedin-share>
-              <!-- <share-buttons [url]={{data.url}}></share-buttons> -->
+            <share-buttons show="6" [showCount]="true"></share-buttons>
           </header>
         </div>
         <div class="col-12" *ngIf="showRbooks">

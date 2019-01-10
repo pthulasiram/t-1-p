@@ -3,6 +3,7 @@
     "production": "ssrapp-5b234",
     "default": "ebooksden-449c7",
     "production_latest": "ssrapp-5b234",
-    "dev": "ebooks-dev-af40b"
+    "dev": "ebooks-dev-af40b",
+    "production-latest": "ebooks-prod"
   }
 }

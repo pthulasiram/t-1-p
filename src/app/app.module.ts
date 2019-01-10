@@ -3,15 +3,12 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire'
 import { HttpModule } from '@angular/http'
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { NgxAnalyticsModule } from 'ngx-analytics';
 import { NgxAnalyticsUirouterModule } from 'ngx-analytics/uiroutermodule';
 //import { AngularFireAuthModule } from '@angular/fire/auth';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { SwiperModule } from 'angular2-useful-swiper';
-// import{ ShareButtonsModule } from 'ngx-sharebuttons';
-import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 import { AdsenseModule } from 'ng2-adsense';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -33,6 +30,8 @@ import { CategoriesDetailsComponent } from './categories/categories-details/cate
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { NgxAnalyticsGoogleAnalytics } from 'ngx-analytics/ga';
 import { NgxAnalyticsGoogleTagManager } from 'ngx-analytics/gtm';
+import { ShareButtonsModule} from '@ngx-share/buttons'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 const APP_ID = 'ebooksden';
 const firebase: any = {
   apiKey: "AIzaSyDzQehjUxeSXdG5bB1858vJBemLqSj35-M",
@@ -65,16 +64,14 @@ const firebase: any = {
     BrowserModule.withServerTransition({ appId: APP_ID }),
     HttpClientModule,
     HttpClientJsonpModule,
-    JwSocialButtonsModule,
+    ShareButtonsModule,
+    FontAwesomeModule,
     HttpModule,
-    
     SwiperModule,
-    // ShareButtonsModule.forRoot(),
     AngularFireModule.initializeApp(firebase, APP_ID),
     AngularFireDatabaseModule,
    // AngularFireAuthModule,
     AppRoutingModule,
-   // NgxAnalyticsModule.forRoot([NgxAnalyticsGoogleAnalytics]),
     NgxAnalyticsUirouterModule.forRoot([NgxAnalyticsGoogleAnalytics]),
     ReactiveFormsModule,
      AdsenseModule.forRoot({
